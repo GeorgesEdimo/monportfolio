@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Georges Marcel | Digital Ops Command Center — Développeur Full-Stack & IT Expert" />
+  <meta name="description" content="Portfolio professionnel de Moussango Edimo Georges Marcel — Développeur Web Full-Stack, Support IT & Community Manager. 9+ ans d'expérience, bilingue FR/EN, Douala Cameroun. Expertise en réseaux, développement web et infrastructure IT." />
+  <meta name="keywords" content="Georges Marcel, développeur full-stack, IT helpdesk, ITIL, Django, React, réseaux, infrastructure IT, MINUSCA, Douala, Cameroun, support technique, community management" />
+  <meta name="author" content="Moussango Edimo Georges Marcel" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="French" />
+  <meta name="theme-color" content="#0a0a0a" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://georgesedimo.com/" />
+  <meta property="og:title" content="Georges Marcel — Digital Ops Command Center" />
+  <meta property="og:description" content="9+ ans d'expérience · Support IT · Dev Full-Stack · Community Manager · Bilingue FR/EN · Douala, Cameroun" />
+  <meta property="og:image" content="https://georgesedimo.com/profile_avatar.png" />
+  <meta property="og:locale" content="fr_FR" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://georgesedimo.com/" />
+  <meta property="twitter:title" content="Georges Marcel — Digital Ops Command Center" />
+  <meta property="twitter:description" content="9+ ans d'expérience · Support IT · Dev Full-Stack · Community Manager · Bilingue FR/EN" />
+  <meta property="twitter:image" content="https://georgesedimo.com/profile_avatar.png" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://georgesedimo.com/" />
+  
+  <title>Georges Marcel | Digital Ops Command Center — Développeur Full-Stack & IT Expert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Moussango Edimo Georges Marcel",
+    "givenName": "Georges",
+    "familyName": "Marcel",
+    "jobTitle": "Développeur Full-Stack & IT Expert",
+    "description": "Développeur Web Full-Stack, Support IT & Community Manager avec 9+ ans d'expérience",
+    "url": "https://georgesedimo.com",
+    "email": "contact@georgesedimo.com",
+    "telephone": "+237686653327",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Douala",
+      "addressCountry": "CM"
+    },
+    "knowsLanguage": ["French", "English"],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "IUGET"
+    },
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "MINUSCA / United Nations",
+        "startDate": "2019",
+        "endDate": "2024"
+      }
+    ],
+    "skills": ["Full-Stack Development", "IT Support", "Network Administration", "Community Management", "Django", "React", "ITIL"],
+    "sameAs": [
+      "https://linkedin.com/in/georgesmarcel",
+      "https://github.com/georgesmarcel"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     CURSOR
+═══════════════════════════════════════════ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- ═══════════════════════════════════════════
+     LOADER TERMINAL
+═══════════════════════════════════════════ -->
+<div class="loader" id="loader">
+  <div class="loader-terminal">
+    <div class="terminal-topbar">
+      <span class="tdot tdot-r"></span>
+      <span class="tdot tdot-y"></span>
+      <span class="tdot tdot-g"></span>
+      <span class="ttitle">boot.sys — georges-marcel</span>
+    </div>
+    <div class="loader-body" id="loader-body"></div>
+    <div class="loader-blink">█</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     KONAMI EASTER EGG
+═══════════════════════════════════════════ -->
+<div class="konami-overlay" id="konami-overlay" aria-hidden="true">
+  <div class="konami-panel">
+    <div class="konami-topbar">
+      <span class="tdot tdot-r"></span>
+      <span class="tdot tdot-y"></span>
+      <span class="tdot tdot-g"></span>
+      <span class="ttitle">root@georges-marcel:~# — ACCESS GRANTED</span>
+      <button class="konami-close" id="konami-close" aria-label="Fermer">✕</button>
+    </div>
+    <div class="konami-body" id="konami-body"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MOBILE MENU BUTTON
+═══════════════════════════════════════════ -->
+<button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu navigation" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<!-- ═══════════════════════════════════════════
+     SIDEBAR — DASHBOARD IT
+═══════════════════════════════════════════ -->
+<aside class="sidebar" id="sidebar" role="navigation" aria-label="Navigation principale">
+
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <span class="logo-bracket">&lt;</span>GM<span class="logo-bracket">/&gt;</span>
+    </div>
+    <div class="sidebar-identity">
+      <div class="sidebar-name">Georges Marcel</div>
+      <div class="sidebar-role-label" data-i18n="sidebar_role">Full-Stack · IT Expert</div>
+    </div>
+    <div class="sidebar-online-badge">
+      <span class="online-dot"></span>
+      <span data-i18n="online_label">Online</span>
+    </div>
+  </div>
+
+  <!-- Vertical progress bar -->
+  <div class="sidebar-scroll-progress" title="Progression de lecture">
+    <div class="sidebar-scroll-fill" id="sidebar-scroll-fill"></div>
+  </div>
+
+  <nav class="sidebar-nav" id="sidebar-nav">
+    <a href="#hero" class="sidebar-item active" data-section="hero" id="snav-hero">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      <span class="s-label" data-i18n="nav_profil">Profil</span>
+      <span class="s-badge s-badge-online">Online</span>
+    </a>
+    <a href="#live-status" class="sidebar-item" data-section="live-status" id="snav-status">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 4.5A7.5 7.5 0 1 1 4.5 12"/><path d="M16.5 7.5 12 12"/></svg>
+      <span class="s-label" data-i18n="nav_status">Status</span>
+      <span class="s-badge s-badge-green">Live</span>
+    </a>
+    <a href="#about" class="sidebar-item" data-section="about" id="snav-about">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="s-label" data-i18n="nav_about">À Propos</span>
+    </a>
+    <a href="#skills" class="sidebar-item" data-section="skills" id="snav-skills">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      <span class="s-label" data-i18n="nav_skills">Compétences</span>
+      <span class="s-badge">40+</span>
+    </a>
+    <a href="#experience" class="sidebar-item" data-section="experience" id="snav-exp">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span class="s-label" data-i18n="nav_exp">Expérience</span>
+      <span class="s-badge">6</span>
+    </a>
+    <a href="#projects" class="sidebar-item" data-section="projects" id="snav-proj">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span class="s-label" data-i18n="nav_proj">Projets</span>
+      <span class="s-badge">3</span>
+    </a>
+    <a href="#testimonials" class="sidebar-item" data-section="testimonials" id="snav-testimonials">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span class="s-label" data-i18n="nav_testimonials">Témoignages</span>
+    </a>
+    <a href="#blog" class="sidebar-item" data-section="blog" id="snav-blog">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      <span class="s-label" data-i18n="nav_blog">Blog</span>
+    </a>
+    <a href="#education" class="sidebar-item" data-section="education" id="snav-edu">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <span class="s-label" data-i18n="nav_edu">Formation</span>
+    </a>
+    <a href="#quote" class="sidebar-item" data-section="quote" id="snav-quote">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <span class="s-label" data-i18n="nav_quote">Devis</span>
+      <span class="s-badge s-badge-green">Free</span>
+    </a>
+    <a href="#contact" class="sidebar-item" data-section="contact" id="snav-contact">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span class="s-label" data-i18n="nav_contact">Contact</span>
+      <span class="s-badge s-badge-avail" data-i18n="nav_avail">Dispo</span>
+    </a>
+    
+    <!-- Presentation Mode Toggle -->
+    <button class="sidebar-item presentation-toggle" id="presentation-toggle" title="Mode Présentation">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      <span class="s-label" data-i18n="nav_presentation">Présentation</span>
+    </button>
+  </nav>
+
+  <div class="sidebar-controls">
+    <button class="ctrl-btn" id="theme-toggle" title="Changer le thème" aria-label="Thème">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="ctrl-btn lang-btn" id="lang-toggle" aria-label="Langue">FR</button>
+    <button class="ctrl-btn" id="sound-toggle" aria-label="Son" title="Son">
+      <svg class="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+      <svg class="icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+    </button>
+  </div>
+
+  <div class="sidebar-cv-wrap">
+    <a href="CV_Georges_Marcel_Exemple.pdf" download class="sidebar-cv-btn" id="cv-download-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      <span data-i18n="download_cv">Télécharger CV</span>
+      <span class="cv-dl-count" id="cv-dl-count">47</span>
+    </a>
+  </div>
+
+</aside>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT
+═══════════════════════════════════════════ -->
+<main class="main" id="main">
+
+  <!-- ─────────────────────────────────
+       HERO — COMMAND CENTER
+  ───────────────────────────────── -->
+  <section id="hero" class="s-hero">
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero-grid">
+      <!-- Terminal box -->
+      <div class="terminal-box" id="hero-terminal">
+        <div class="terminal-topbar">
+          <span class="tdot tdot-r"></span>
+          <span class="tdot tdot-y"></span>
+          <span class="tdot tdot-g"></span>
+          <span class="ttitle">georges-marcel.sys — terminal v9.0</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <!-- Injected by JS -->
+        </div>
+        <div class="terminal-input-line">
+          <span class="t-prompt">root@gm:~$</span>
+          <span class="t-caret" id="t-caret">▊</span>
+        </div>
+      </div>
+
+      <!-- Identity panel -->
+      <div class="hero-identity">
+        <div class="hero-tag-line">
+          <span class="tag-bracket">[</span>
+          <span class="tag-text" data-i18n="hero_profile">PROFIL</span>
+          <span class="tag-bracket">]</span>
+        </div>
+        <h1 class="hero-name">
+          <span class="hero-name-line1">Moussango Edimo</span>
+          <span class="hero-name-line2">Georges Marcel</span>
+        </h1>
+        <div class="hero-typewriter-wrap">
+          <span class="tw-prefix" data-i18n="tw_prefix">Spécialité&nbsp;›&nbsp;</span>
+          <span class="tw-text" id="tw-text"></span>
+          <span class="tw-cursor">▊</span>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hstat">
+            <span class="hstat-num" data-count="9" id="hstat-0">0</span><span class="hstat-plus">+</span>
+            <span class="hstat-lbl" data-i18n="stat_years">ans d'xp</span>
+          </div>
+          <div class="hstat-div">·</div>
+          <div class="hstat">
+            <span class="hstat-num" data-count="6" id="hstat-1">0</span>
+            <span class="hstat-lbl" data-i18n="stat_companies">entreprises</span>
+          </div>
+          <div class="hstat-div">·</div>
+          <div class="hstat">
+            <span class="hstat-num" data-count="2" id="hstat-2">0</span>
+            <span class="hstat-lbl" data-i18n="stat_langs">langues</span>
+          </div>
+        </div>
+
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary" id="btn-hero-contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span data-i18n="btn_contact">Me contacter</span>
+          </a>
+          <a href="#experience" class="btn-outline" id="btn-hero-missions">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <span data-i18n="btn_missions">Voir mes missions</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-cue" id="hero-scroll-cue">
+      <div class="scroll-line-wrap"><div class="scroll-line-inner"></div></div>
+      <span data-i18n="scroll_hint">Défiler</span>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       LIVE STATUS — MONITORING
+  ───────────────────────────────── -->
+  <section id="live-status" class="s-status">
+    <div class="container">
+      <div class="status-panel">
+        <div class="status-panel-header">
+          <div class="status-led green"></div>
+          <span class="status-panel-title" data-i18n="status_title">Statut Opérationnel</span>
+          <span class="status-uptime" id="status-uptime">uptime: 9+ years</span>
+          <span class="status-timestamp" id="status-ts"></span>
+        </div>
+        <div class="status-grid">
+          <div class="status-row">
+            <div class="sr-indicator green"></div>
+            <div class="sr-key" data-i18n="s_avail">Disponibilité</div>
+            <div class="sr-val green-txt" data-i18n="s_avail_val">DISPONIBLE IMMÉDIATEMENT</div>
+          </div>
+          <div class="status-row">
+            <div class="sr-indicator cyan"></div>
+            <div class="sr-key" data-i18n="s_location">Localisation</div>
+            <div class="sr-val">Douala, Cameroun &nbsp;🌍</div>
+          </div>
+          <div class="status-row">
+            <div class="sr-indicator blue"></div>
+            <div class="sr-key" data-i18n="s_languages">Langues</div>
+            <div class="sr-val">Français &bull; English</div>
+          </div>
+          <div class="status-row">
+            <div class="sr-indicator green"></div>
+            <div class="sr-key" data-i18n="s_response">Réponse</div>
+            <div class="sr-val" data-i18n="s_response_val">Sous 24h</div>
+          </div>
+          <div class="status-row">
+            <div class="sr-indicator amber"></div>
+            <div class="sr-key">Email</div>
+            <div class="sr-val"><a href="mailto:contact@georgesedimo.com">contact@georgesedimo.com</a></div>
+          </div>
+          <div class="status-row">
+            <div class="sr-indicator cyan"></div>
+            <div class="sr-key" data-i18n="s_phone">Téléphone</div>
+            <div class="sr-val"><a href="tel:+237686653327">+237 686 653 327</a></div>
+          </div>
+        </div>
+
+        <!-- Real-time Statistics -->
+        <div class="status-stats">
+          <div class="stat-item">
+            <div class="stat-icon">👁️</div>
+            <div class="stat-value" id="stat-visits">1,247</div>
+            <div class="stat-label" data-i18n="stat_visits">Visites ce mois</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-value" id="stat-response">2.4h</div>
+            <div class="stat-label" data-i18n="stat_response">Temps de réponse moyen</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">✅</div>
+            <div class="stat-value" id="stat-projects">12</div>
+            <div class="stat-label" data-i18n="stat_projects">Projets cette année</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       ABOUT
+  ───────────────────────────────── -->
+  <section id="about" class="s-about">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// PROFILE_DATA</span>
+        <h2 class="s-title" data-i18n="about_title">À Propos de Moi</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="avatar-frame">
+            <img src="images/profil_avatar.png" alt="Georges Marcel – Développeur Full-Stack & IT Expert" class="avatar-img" />
+            <div class="avatar-ring"></div>
+          </div>
+          <div class="about-badges">
+            <div class="about-badge-item">
+              <span class="abi-icon">💼</span>
+              <div>
+                <strong>Georges Marcel EDIMO</strong>
+                <span data-i18n="badge_un">Votre Professionnel depuis 2015</span>
+              </div>
+            </div>
+            <div class="about-badge-item">
+              <span class="abi-icon fne-lbl">FNE</span>
+              <div>
+                <strong>CO1-2018-2399</strong>
+                <span data-i18n="badge_fne">Matricule national</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-lead" data-i18n="about_lead">
+            Professionnel digital polyvalent avec plus de <strong class="accent">9 ans d'expérience</strong> en administration systèmes &amp; réseaux, support informatique ITIL N1/N2, développement web full-stack et community management.
+          </p>
+          <p class="about-body" data-i18n="about_body">
+            Expérience au sein des <strong>Nations Unies (MINUSCA)</strong>, en environnement client exigeant et en formation professionnelle. Bilingue <strong>français-anglais</strong>. Disponible immédiatement pour missions en présentiel ou à distance.
+          </p>
+          <div class="about-chips">
+            <span class="chip chip-green">⚡ <span data-i18n="chip_dispo">Disponible immédiatement</span></span>
+            <span class="chip chip-blue">🇺🇳 Nations Unies</span>
+            <span class="chip chip-cyan">🌐 Bilingue FR/EN</span>
+            <span class="chip chip-amber">🎓 Licence Génie Logiciel</span>
+          </div>
+          <div class="about-info-grid">
+            <div class="aig-item">
+              <span class="aig-lbl" data-i18n="aig_city">Ville</span>
+              <span class="aig-val">Douala, Cameroun</span>
+            </div>
+            <div class="aig-item">
+              <span class="aig-lbl">Email</span>
+              <span class="aig-val"><a href="mailto:contact@georgesedimo.com">contact@georgesedimo.com</a></span>
+            </div>
+            <div class="aig-item">
+              <span class="aig-lbl">Tel.</span>
+              <span class="aig-val"><a href="tel:+237686653327">+237 686 653 327</a></span>
+            </div>
+            <div class="aig-item">
+              <span class="aig-lbl">Web</span>
+              <span class="aig-val"><a href="https://georgesedimo.com" target="_blank" rel="noopener">georgesedimo.com</a></span>
+            </div>
+            <div class="aig-item">
+              <span class="aig-lbl" data-i18n="aig_langs">Langues</span>
+              <span class="aig-val">Français · Anglais</span>
+            </div>
+            <div class="aig-item">
+              <span class="aig-lbl" data-i18n="aig_domain">Domaines</span>
+              <span class="aig-val">IT · Dev · CM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       SKILLS — RADAR + CONSTELLATION
+  ───────────────────────────────── -->
+  <section id="skills" class="s-skills">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// SKILL_MATRIX</span>
+        <h2 class="s-title" data-i18n="skills_title">Compétences Techniques</h2>
+      </div>
+
+      <div class="skills-top">
+        <!-- Radar Chart -->
+        <div class="radar-panel">
+          <h3 class="panel-subtitle" data-i18n="radar_title">Vue d'ensemble</h3>
+          <div class="radar-wrap">
+            <svg id="radar-svg" class="radar-svg" viewBox="0 0 320 320" aria-label="Radar des compétences"></svg>
+          </div>
+          <div class="radar-legend" id="radar-legend"></div>
+        </div>
+
+        <!-- Skill Bars -->
+        <div class="bars-panel">
+          <h3 class="panel-subtitle" data-i18n="bars_title">Niveaux détaillés</h3>
+          <div class="skill-bars" id="skill-bars">
+            <div class="sbar-item">
+              <div class="sbar-meta"><span data-i18n="sk_support">Support IT / ITIL N1-N2</span><span class="sbar-pct">95%</span></div>
+              <div class="sbar-track"><div class="sbar-fill" data-w="95"></div></div>
+            </div>
+            <div class="sbar-item">
+              <div class="sbar-meta"><span data-i18n="sk_net">Réseaux &amp; Infrastructure</span><span class="sbar-pct">90%</span></div>
+              <div class="sbar-track"><div class="sbar-fill" data-w="90"></div></div>
+            </div>
+            <div class="sbar-item">
+              <div class="sbar-meta"><span data-i18n="sk_dev">Développement Web Full-Stack</span><span class="sbar-pct">88%</span></div>
+              <div class="sbar-track"><div class="sbar-fill" data-w="88"></div></div>
+            </div>
+            <div class="sbar-item">
+              <div class="sbar-meta"><span data-i18n="sk_cm">Community Management</span><span class="sbar-pct">85%</span></div>
+              <div class="sbar-track"><div class="sbar-fill" data-w="85"></div></div>
+            </div>
+            <div class="sbar-item">
+              <div class="sbar-meta"><span>Python / Django / Flask</span><span class="sbar-pct">82%</span></div>
+              <div class="sbar-track"><div class="sbar-fill" data-w="82"></div></div>
+            </div>
+            <div class="sbar-item">
+              <div class="sbar-meta"><span>React.js / Laravel / PHP</span><span class="sbar-pct">80%</span></div>
+              <div class="sbar-track"><div class="sbar-fill" data-w="80"></div></div>
+            </div>
+          </div>
+
+          <!-- Cisco certification progress -->
+          <div class="cert-progress-card">
+            <div class="cpc-header">
+              <span class="cpc-icon">📡</span>
+              <div>
+                <div class="cpc-title">Certification Cisco CCNA + MikroTik</div>
+                <div class="cpc-school">PANAFRICANTECH — 2025 <span class="cpc-badge" data-i18n="cert_in_progress">En cours</span></div>
+              </div>
+              <span class="cpc-pct">70%</span>
+            </div>
+            <div class="sbar-track"><div class="sbar-fill sbar-amber" data-w="70"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Tag Categories -->
+      <div class="skill-cats">
+        <div class="scat-card reveal">
+          <div class="scat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h4 class="scat-title" data-i18n="cat_sys">Systèmes &amp; ITSM</h4>
+          <div class="scat-tags">
+            <span class="stag">ITIL N1/N2</span><span class="stag">Windows Server</span><span class="stag">Linux Ubuntu/Debian</span><span class="stag">VMware</span><span class="stag">Hyper-V</span><span class="stag">Microsoft 365</span><span class="stag">Active Directory</span><span class="stag">TeamViewer</span><span class="stag">AnyDesk</span>
+          </div>
+        </div>
+        <div class="scat-card reveal">
+          <div class="scat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
+          <h4 class="scat-title" data-i18n="cat_net">Réseaux &amp; Sécurité</h4>
+          <div class="scat-tags">
+            <span class="stag">LAN/WAN/Wi-Fi</span><span class="stag">TCP/IP</span><span class="stag">DHCP/DNS</span><span class="stag">VPN</span><span class="stag">PSSI</span><span class="stag">PRA/PCA</span><span class="stag">Cisco CCNA</span><span class="stag">MikroTik</span><span class="stag stag-cyan">Cisco Packet Tracer</span>
+          </div>
+        </div>
+        <div class="scat-card reveal">
+          <div class="scat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h4 class="scat-title" data-i18n="cat_dev">Développement Web</h4>
+          <div class="scat-tags">
+            <span class="stag stag-cyan">Python</span><span class="stag stag-cyan">Django</span><span class="stag stag-cyan">Flask</span><span class="stag stag-cyan">PHP</span><span class="stag stag-cyan">Laravel</span><span class="stag stag-cyan">React.js</span><span class="stag">MySQL</span><span class="stag">PostgreSQL</span><span class="stag">MongoDB</span><span class="stag">WordPress</span><span class="stag">Git/CI-CD</span><span class="stag">API REST</span><span class="stag">Webpack</span><span class="stag">Vite</span>
+          </div>
+        </div>
+        <div class="scat-card reveal">
+          <div class="scat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h4 class="scat-title" data-i18n="cat_cm">Community Management</h4>
+          <div class="scat-tags">
+            <span class="stag">Facebook</span><span class="stag">WhatsApp Business</span><span class="stag">E-réputation</span><span class="stag">Animation</span><span class="stag">Modération</span><span class="stag">Google Analytics</span><span class="stag">Canva</span><span class="stag">Photoshop</span><span class="stag">Premiere Pro</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Icons Carousel -->
+      <div class="tech-icons-carousel">
+        <div class="tech-icons-track">
+          <!-- Full-Stack Languages -->
+          <div class="tech-icon-group">
+            <span class="tech-icon-title">Full-Stack</span>
+            <div class="tech-icons">
+              <a href="https://www.python.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></a>
+              <a href="https://www.djangoproject.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" /></a>
+              <a href="https://flask.palletsprojects.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" /></a>
+              <a href="https://www.php.net" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" /></a>
+              <a href="https://laravel.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" /></a>
+              <a href="https://react.dev" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /></a>
+              <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /></a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></a>
+              <a href="https://www.typescriptlang.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /></a>
+              <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /></a>
+              <a href="https://www.postgresql.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /></a>
+              <a href="https://www.mongodb.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></a>
+            </div>
+          </div>
+          <!-- IT Support Software -->
+          <div class="tech-icon-group">
+            <span class="tech-icon-title">IT Support</span>
+            <div class="tech-icons">
+              <a href="https://learn.microsoft.com/en-us/windows-server" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows Server" /></a>
+              <a href="https://www.linux.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" /></a>
+              <a href="https://www.vmware.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" alt="VMware" /></a>
+              <a href="https://learn.microsoft.com/en-us/virtualization/hyper-v" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Hyper-V" /></a>
+              <a href="https://learn.microsoft.com/en-us/windows-server/identity/ad-ds" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="Active Directory" /></a>
+              <a href="https://www.teamviewer.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/6/62/TeamViewer_Logo.svg" alt="TeamViewer" /></a>
+              <a href="https://anydesk.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/8/85/AnyDesk_logo.svg" alt="AnyDesk" /></a>
+              <a href="https://www.microsoft.com/office" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="Office 365" /></a>
+              <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-plain.svg" alt="ITIL" /></a>
+            </div>
+          </div>
+          <!-- Network Tools -->
+          <div class="tech-icon-group">
+            <span class="tech-icon-title">Réseaux</span>
+            <div class="tech-icons">
+              <a href="https://www.cisco.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Cisco_logo_blue_2016.svg" alt="Cisco" /></a>
+              <a href="https://mikrotik.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/MikroTik_logo.svg" alt="MikroTik" /></a>
+              <a href="https://www.wireshark.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Wireshark_Icon.svg" alt="Wireshark" /></a>
+              <a href="https://nmap.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Nmap_logo.svg" alt="Nmap" /></a>
+              <a href="https://www.netacad.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Cisco_logo_blue_2016.svg" alt="Packet Tracer" /></a>
+              <a href="https://www.openvpn.net" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/OpenVPN_logo.svg" alt="VPN" /></a>
+              <a href="https://www.paloaltonetworks.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Palo_Alto_Networks_logo.svg" alt="Firewall" /></a>
+            </div>
+          </div>
+          <!-- DevOps Tools -->
+          <div class="tech-icon-group">
+            <span class="tech-icon-title">DevOps</span>
+            <div class="tech-icons">
+              <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /></a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /></a>
+              <a href="https://www.docker.com" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /></a>
+              <a href="https://www.jenkins.io" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg" alt="CI/CD" /></a>
+              <a href="https://webpack.js.org" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Webpack.svg" alt="Webpack" /></a>
+              <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite" /></a>
+              <a href="https://restfulapi.net" target="_blank" rel="noopener noreferrer" class="tech-icon-link"><img class="tech-icon-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_API.svg" alt="REST API" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       EXPERIENCE — TICKETS ITIL
+  ───────────────────────────────── -->
+  <section id="experience" class="s-experience">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// MISSION_LOG</span>
+        <h2 class="s-title" data-i18n="exp_title">Journal des Missions</h2>
+      </div>
+      <div class="tickets-grid">
+
+        <div class="ticket-card reveal" data-priority="HIGH" data-status="CLOSED">
+          <div class="ticket-topbar">
+            <span class="ticket-id">[TICKET #2026-001]</span>
+            <span class="ticket-status closed">CLOSED ✓</span>
+            <span class="ticket-priority high">Priority: HIGH</span>
+          </div>
+          <div class="ticket-header">
+            <h3 class="ticket-role" data-i18n="job1_title">Responsable des Systèmes d'Information</h3>
+            <div class="ticket-company">IFP CAFOR — Douala</div>
+            <div class="ticket-dates">Janv. 2026 → Juin 2026</div>
+          </div>
+          <div class="ticket-sep">────────────────────────────────────</div>
+          <ul class="ticket-tasks">
+            <li data-i18n="job1_t1">Pilotage infrastructure IT complète : parc, serveurs, réseau</li>
+            <li data-i18n="job1_t2">Administration <em>ifpcafor.com</em> + bases MySQL/PostgreSQL</li>
+            <li data-i18n="job1_t3">Déploiement PSSI et formation des équipes</li>
+            <li data-i18n="job1_t4">Community management Facebook / WhatsApp Business</li>
+          </ul>
+          <div class="ticket-stack">
+            <span class="tstack">Windows Server</span><span class="tstack">MySQL</span><span class="tstack">PSSI</span><span class="tstack">Community Mgmt</span>
+          </div>
+        </div>
+
+        <div class="ticket-card reveal" data-priority="MEDIUM" data-status="CLOSED">
+          <div class="ticket-topbar">
+            <span class="ticket-id">[TICKET #2024-002]</span>
+            <span class="ticket-status closed">CLOSED ✓</span>
+            <span class="ticket-priority medium">Priority: MEDIUM</span>
+          </div>
+          <div class="ticket-header">
+            <h3 class="ticket-role" data-i18n="job2_title">Conseiller Technique Support, Helpdesk N1</h3>
+            <div class="ticket-company">INTELCIA Cameroun — Douala</div>
+            <div class="ticket-dates">Janv. 2024 → Avr. 2025</div>
+          </div>
+          <div class="ticket-sep">────────────────────────────────────</div>
+          <ul class="ticket-tasks">
+            <li data-i18n="job2_t1">Gestion incidents N1 selon SLA et KPI</li>
+            <li data-i18n="job2_t2">Ticketing, support téléphonique et relation client digitale</li>
+            <li data-i18n="job2_t3">Traitement des insatisfactions et escalades</li>
+          </ul>
+          <div class="ticket-stack">
+            <span class="tstack">ITIL N1</span><span class="tstack">SLA/KPI</span><span class="tstack">Ticketing</span>
+          </div>
+        </div>
+
+        <div class="ticket-card reveal" data-priority="HIGH" data-status="CLOSED">
+          <div class="ticket-topbar">
+            <span class="ticket-id">[TICKET #2022-003]</span>
+            <span class="ticket-status closed">CLOSED ✓</span>
+            <span class="ticket-priority high">Priority: HIGH</span>
+          </div>
+          <div class="ticket-header">
+            <h3 class="ticket-role" data-i18n="job3_title">Responsable Informatique</h3>
+            <div class="ticket-company">ISLTI – Groupe IUA — Douala</div>
+            <div class="ticket-dates">Août 2022 → Janv. 2024</div>
+          </div>
+          <div class="ticket-sep">────────────────────────────────────</div>
+          <ul class="ticket-tasks">
+            <li data-i18n="job3_t1">Admin Windows Server, Linux, LAN/Wi-Fi</li>
+            <li data-i18n="job3_t2">Mise en place PRA/PCA et gestion parc IT</li>
+            <li data-i18n="job3_t3">Gestion droits et groupes étudiants</li>
+          </ul>
+          <div class="ticket-stack">
+            <span class="tstack">Windows Server</span><span class="tstack">Linux</span><span class="tstack">PRA/PCA</span>
+          </div>
+        </div>
+
+        <div class="ticket-card ticket-featured reveal" data-priority="HIGH" data-status="CLOSED">
+          <div class="ticket-topbar">
+            <span class="ticket-id">[TICKET #2019-004]</span>
+            <span class="ticket-status closed">CLOSED ✓</span>
+            <span class="ticket-priority high">Priority: HIGH</span>
+          </div>
+          <div class="ticket-header">
+            <h3 class="ticket-role" data-i18n="job4_title">Technicien Informatique, Consultant ONU</h3>
+            <div class="ticket-company">MINUSCA / Nations Unies — Douala</div>
+            <div class="ticket-dates">Fév. 2019 → 2024</div>
+          </div>
+          <div class="ticket-sep">────────────────────────────────────</div>
+          <ul class="ticket-tasks">
+            <li data-i18n="job4_t1">Installation et mise en réseau systèmes d'impression</li>
+            <li data-i18n="job4_t2">Gestion logiciels, mises à jour et migrations</li>
+            <li data-i18n="job4_t3">Wi-Fi, support et diagnostic technique</li>
+          </ul>
+          <div class="ticket-stack">
+            <span class="tstack tstack-cyan">Wi-Fi</span><span class="tstack tstack-cyan">Support technique</span><span class="tstack tstack-cyan">ONU</span>
+          </div>
+        </div>
+
+        <div class="ticket-card reveal" data-priority="MEDIUM" data-status="CLOSED">
+          <div class="ticket-topbar">
+            <span class="ticket-id">[TICKET #2020-005]</span>
+            <span class="ticket-status closed">CLOSED ✓</span>
+            <span class="ticket-priority medium">Priority: MEDIUM</span>
+          </div>
+          <div class="ticket-header">
+            <h3 class="ticket-role" data-i18n="job5_title">Technicien Informatique &amp; DIT, Freelance</h3>
+            <div class="ticket-company">RACINE S.A.S — Douala</div>
+            <div class="ticket-dates">Fév. 2020 → Juin 2022</div>
+          </div>
+          <div class="ticket-sep">────────────────────────────────────</div>
+          <ul class="ticket-tasks">
+            <li data-i18n="job5_t1">Maintenance corrective et remplacement pièces</li>
+            <li data-i18n="job5_t2">Gestion licences et supervision flux réseau</li>
+          </ul>
+          <div class="ticket-stack">
+            <span class="tstack">Maintenance</span><span class="tstack">Licences</span>
+          </div>
+        </div>
+
+        <div class="ticket-card reveal" data-priority="LOW" data-status="CLOSED">
+          <div class="ticket-topbar">
+            <span class="ticket-id">[TICKET #2017-006]</span>
+            <span class="ticket-status closed">CLOSED ✓</span>
+            <span class="ticket-priority low">Priority: LOW</span>
+          </div>
+          <div class="ticket-header">
+            <h3 class="ticket-role" data-i18n="job6_title">Informaticien, Développeur Web &amp; Formateur</h3>
+            <div class="ticket-company">Genius Muna — Douala</div>
+            <div class="ticket-dates">Mai 2017 → Janv. 2020</div>
+          </div>
+          <div class="ticket-sep">────────────────────────────────────</div>
+          <ul class="ticket-tasks">
+            <li data-i18n="job6_t1">Maintenance équipements et apps web</li>
+            <li data-i18n="job6_t2">Tests, documentation et formation utilisateurs</li>
+          </ul>
+          <div class="ticket-stack">
+            <span class="tstack">Dev Web</span><span class="tstack">Formation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       PROJECTS — OS WINDOWS 3D
+  ───────────────────────────────── -->
+  <section id="projects" class="s-projects">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// DEPLOYMENTS</span>
+        <h2 class="s-title" data-i18n="proj_title">Projets &amp; Déploiements</h2>
+      </div>
+
+      <!-- Project Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Tous</button>
+        <button class="filter-btn" data-filter="dev" data-i18n="filter_dev">Développement</button>
+        <button class="filter-btn" data-filter="network" data-i18n="filter_network">Réseau</button>
+        <button class="filter-btn" data-filter="consulting" data-i18n="filter_consulting">Consulting</button>
+      </div>
+
+      <div class="os-windows-grid">
+
+        <div class="os-window reveal" id="proj-1" data-category="network consulting">
+          <div class="os-titlebar">
+            <div class="os-dots">
+              <span class="os-dot os-dot-r"></span>
+              <span class="os-dot os-dot-y"></span>
+              <span class="os-dot os-dot-g"></span>
+            </div>
+            <span class="os-wintitle">ifp-cafor.sys — Infrastructure SI</span>
+          </div>
+          <div class="os-body">
+            <div class="os-icon-row">
+              <div class="os-proj-icon">🖥️</div>
+              <div>
+                <div class="os-proj-name" data-i18n="p1_name">Système d'Information IFP CAFOR</div>
+                <div class="os-proj-type" data-i18n="p1_type">Infrastructure IT · Admin SI · Community</div>
+              </div>
+            </div>
+            <p class="os-proj-desc" data-i18n="p1_desc">
+              Déploiement complet de l'infrastructure IT : réseau LAN/Wi-Fi, serveurs, site <em>ifpcafor.com</em>, bases de données MySQL/PostgreSQL, politique PSSI et community management Facebook/WhatsApp.
+            </p>
+            <div class="os-terminal-mini">
+              <span class="oterm-line"><span class="oterm-prompt">$</span> <span class="oterm-cmd">deploy --env production --target ifpcafor.com</span></span>
+              <span class="oterm-line oterm-success"><span class="oterm-prompt">✓</span> <span>Stack: PHP · MySQL · WordPress · LAN</span></span>
+            </div>
+            <div class="os-tags">
+              <span class="ostag">Windows Server</span><span class="ostag">MySQL</span><span class="ostag">PHP</span><span class="ostag">PSSI</span><span class="ostag">Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="os-window os-window-featured reveal" id="proj-2" data-category="network consulting">
+          <div class="os-titlebar">
+            <div class="os-dots">
+              <span class="os-dot os-dot-r"></span>
+              <span class="os-dot os-dot-y"></span>
+              <span class="os-dot os-dot-g"></span>
+            </div>
+            <span class="os-wintitle">minusca-un.sys — Réseau Onusien</span>
+            <span class="os-un-flag">🇺🇳</span>
+          </div>
+          <div class="os-body">
+            <div class="os-icon-row">
+              <div class="os-proj-icon">🌐</div>
+              <div>
+                <div class="os-proj-name" data-i18n="p2_name">Infrastructure Réseau MINUSCA / ONU</div>
+                <div class="os-proj-type" data-i18n="p2_type">IT Consulting · Réseau · Support ONU</div>
+              </div>
+            </div>
+            <p class="os-proj-desc" data-i18n="p2_desc">
+              Consultant IT auprès des Nations Unies (MINUSCA) de 2019 à 2024. Mise en réseau des systèmes d'impression, gestion logiciels et migrations, infrastructure Wi-Fi et support technique multi-sites.
+            </p>
+            <div class="os-terminal-mini">
+              <span class="oterm-line"><span class="oterm-prompt">$</span> <span class="oterm-cmd">ping minusca-un.org --from Douala</span></span>
+              <span class="oterm-line oterm-success"><span class="oterm-prompt">✓</span> <span>Reply: 4ms TTL=64 — Connection stable</span></span>
+            </div>
+            <div class="os-tags">
+              <span class="ostag ostag-cyan">ONU/MINUSCA</span><span class="ostag">Wi-Fi</span><span class="ostag">Réseau</span><span class="ostag">Migration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="os-window reveal" id="proj-3" data-category="dev">
+          <div class="os-titlebar">
+            <div class="os-dots">
+              <span class="os-dot os-dot-r"></span>
+              <span class="os-dot os-dot-y"></span>
+              <span class="os-dot os-dot-g"></span>
+            </div>
+            <span class="os-wintitle">fullstack.dev — Applications Web</span>
+          </div>
+          <div class="os-body">
+            <div class="os-icon-row">
+              <div class="os-proj-icon">⚡</div>
+              <div>
+                <div class="os-proj-name" data-i18n="p3_name">Développement Full-Stack</div>
+                <div class="os-proj-type" data-i18n="p3_type">Python · Django · React · Laravel</div>
+              </div>
+            </div>
+            <p class="os-proj-desc" data-i18n="p3_desc">
+              Développement d'applications web full-stack : backends Python/Django/Flask, APIs REST, frontends React.js, intégration bases de données PostgreSQL/MySQL/MongoDB. Formation et documentation utilisateurs.
+            </p>
+            <div class="os-terminal-mini">
+              <span class="oterm-line"><span class="oterm-prompt">$</span> <span class="oterm-cmd">python manage.py runserver 0.0.0.0:8000</span></span>
+              <span class="oterm-line oterm-success"><span class="oterm-prompt">✓</span> <span>Django 4.x · React · PostgreSQL · Redis</span></span>
+            </div>
+            <div class="os-tags">
+              <span class="ostag ostag-cyan">Python</span><span class="ostag ostag-cyan">Django</span><span class="ostag ostag-cyan">React</span><span class="ostag ostag-cyan">Laravel</span><span class="ostag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       EDUCATION
+  ───────────────────────────────── -->
+  <section id="education" class="s-education">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// CERTIFICATIONS</span>
+        <h2 class="s-title" data-i18n="edu_title">Formations &amp; Certifications</h2>
+      </div>
+      <div class="edu-list">
+
+        <div class="edu-item edu-item-active reveal" data-cert="ccna">
+          <div class="edu-year-col">
+            <span class="edu-year">2025</span>
+            <span class="edu-badge-active" data-i18n="in_progress">En cours</span>
+          </div>
+          <div class="edu-connector"><div class="edu-dot edu-dot-active"></div><div class="edu-line"></div></div>
+          <div class="edu-content">
+            <h3 class="edu-title" data-i18n="cert1">Certification Cisco CCNA / MikroTik</h3>
+            <p class="edu-school">PANAFRICANTECH</p>
+            <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html" target="_blank" rel="noopener" class="cert-verify-link" data-i18n="verify_cert">Vérifier la certification ↗</a>
+          </div>
+        </div>
+
+        <div class="edu-item reveal" data-cert="licence">
+          <div class="edu-year-col"><span class="edu-year">2022–23</span></div>
+          <div class="edu-connector"><div class="edu-dot"></div><div class="edu-line"></div></div>
+          <div class="edu-content">
+            <h3 class="edu-title" data-i18n="cert2">Licence Génie Logiciel</h3>
+            <p class="edu-school">IUGET, Douala</p>
+            <a href="https://iuget.cm" target="_blank" rel="noopener" class="cert-verify-link" data-i18n="verify_school">Vérifier l'établissement ↗</a>
+          </div>
+        </div>
+
+        <div class="edu-item reveal" data-cert="bts">
+          <div class="edu-year-col"><span class="edu-year">2020–22</span></div>
+          <div class="edu-connector"><div class="edu-dot"></div><div class="edu-line"></div></div>
+          <div class="edu-content">
+            <h3 class="edu-title" data-i18n="cert3">BTS Génie Logiciel</h3>
+            <p class="edu-school">IUGET, Douala</p>
+            <a href="https://iuget.cm" target="_blank" rel="noopener" class="cert-verify-link" data-i18n="verify_school">Vérifier l'établissement ↗</a>
+          </div>
+        </div>
+
+        <div class="edu-item reveal" data-cert="maintenance">
+          <div class="edu-year-col"><span class="edu-year">2017–19</span></div>
+          <div class="edu-connector"><div class="edu-dot"></div><div class="edu-line"></div></div>
+          <div class="edu-content">
+            <h3 class="edu-title" data-i18n="cert4">Maintenance Informatique et Réseaux</h3>
+            <p class="edu-school">CIS — Cameroon Institute of Specialisation</p>
+            <a href="https://cis-cameroon.com" target="_blank" rel="noopener" class="cert-verify-link" data-i18n="verify_school">Vérifier l'établissement ↗</a>
+          </div>
+        </div>
+
+        <div class="edu-item reveal" data-cert="bac">
+          <div class="edu-year-col"><span class="edu-year">2015</span></div>
+          <div class="edu-connector"><div class="edu-dot"></div></div>
+          <div class="edu-content">
+            <h3 class="edu-title" data-i18n="cert5">Baccalauréat A4 ESP</h3>
+            <p class="edu-school">Lycée de Ndog Hem</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- References -->
+      <div class="refs-block">
+        <h3 class="refs-title" data-i18n="refs_title">Références Professionnelles</h3>
+        <div class="refs-grid">
+          <div class="ref-card reveal">
+            <div class="ref-avatar">ÉL</div>
+            <div class="ref-info">
+              <strong>M. Eric Thierry Lobe</strong>
+              <span data-i18n="ref1_role">Chef d'agence MINUSCA U.N, Douala</span>
+            </div>
+          </div>
+          <div class="ref-card reveal">
+            <div class="ref-avatar">MT</div>
+            <div class="ref-info">
+              <strong>Michel Tanga</strong>
+              <span data-i18n="ref2_role">Ingénieur logiciel, Pondo Creative</span>
+              <a href="tel:+237674717852" class="ref-tel">+237 674 717 852</a>
+            </div>
+          </div>
+          <div class="ref-card reveal">
+            <div class="ref-avatar">AM</div>
+            <div class="ref-info">
+              <strong>Augustine Moukodi</strong>
+              <span data-i18n="ref3_role">Présidente-directrice, Racine S.A.S</span>
+              <a href="tel:+23769974734" class="ref-tel">+237 699 747 34</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       TESTIMONIALS — CLIENT REVIEWS
+  ───────────────────────────────── -->
+  <section id="testimonials" class="s-testimonials">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// CLIENT_FEEDBACK</span>
+        <h2 class="s-title" data-i18n="testimonials_title">Témoignages Clients</h2>
+        <p class="s-subtitle" data-i18n="testimonials_sub">Ce que mes clients disent de mon travail</p>
+      </div>
+
+      <div class="testimonials-carousel">
+        <div class="testimonial-track" id="testimonial-track">
+          <div class="testimonial-item active" data-index="0">
+            <div class="testimonial-content">
+              <div class="testimonial-avatar">
+                <img src="images/ericthierry.jpg" alt="Eric Thierry Lobe" />
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Georges EDIMO est une personne très autonome, aimant résoudre les problèmes et s'impliquant activement dans tout ce qui touche à la technologie. Il est également très serviable et constitue un excellent membre d'équipe. Il gère les tâches et les responsabilités avec brio et s'efforce de dépasser les attentes."</p>
+              <div class="testimonial-author">
+                <div class="author-name">Eric Thierry LOBE</div>
+                <div class="author-role">Logistics Director at MINUSCA</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item" data-index="1">
+            <div class="testimonial-content">
+              <div class="testimonial-avatar">
+                <img src="images/augustinemoukodi.jpg" alt="Augustine Moukodi" />
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Georges EDIMO excelle non seulement dans tous les aspects techniques, mais c'est aussi sa créativité et son sens de l'innovation qui impressionnent le plus. Travailler avec lui a été un plaisir, car son souci du détail est inégalé ! Je ne l'ai jamais vu reculer devant un défi."</p>
+              <div class="testimonial-author">
+                <div class="author-name">Augustine MOUKODI</div>
+                <div class="author-role">CEO of RACINES, Screenwriter and Director</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item" data-index="2">
+            <div class="testimonial-content">
+              <div class="testimonial-avatar">
+                <img src="images/micheltanga.jpg" alt="Michel Tanga" />
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"J'ai collaboré avec Georges EDIMO sur plusieurs projets. Georges EDIMO est un homme très motivé et travailleur. Il aime résoudre les problèmes et expérimenter différentes approches pour les résoudre efficacement. Il possède un excellent esprit d'équipe et de solides compétences en leadership."</p>
+              <div class="testimonial-author">
+                <div class="author-name">Michel TANGA</div>
+                <div class="author-role">Full Stack Developer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item" data-index="3">
+            <div class="testimonial-content">
+              <div class="testimonial-avatar">
+                <img src="images/moiseebot.jpg" alt="Moise Ebot" />
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"J'ai collaboré avec de nombreux professionnels tout au long de mon parcours, mais Georges EDIMO a été un cas unique. J'ai débuté mon parcours professionnel avec lui et il m'a aidé à comprendre les processus internes de l'entreprise. Son éthique de travail est irréprochable et il s'adapte facilement à chaque situation."</p>
+              <div class="testimonial-author">
+                <div class="author-name">Moise EBOT</div>
+                <div class="author-role">Graphic Designer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-controls">
+          <button class="testimonial-nav prev" id="testimonial-prev" aria-label="Previous testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <div class="testimonial-dots" id="testimonial-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+          <button class="testimonial-nav next" id="testimonial-next" aria-label="Next testimonial">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       BLOG — TECHNICAL ARTICLES
+  ───────────────────────────────── -->
+  <section id="blog" class="s-blog">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// TECH_BLOG</span>
+        <h2 class="s-title" data-i18n="blog_title">Blog & Articles Techniques</h2>
+        <p class="s-subtitle" data-i18n="blog_sub">Partage d'expertise IT: Sécurité, Réseaux, Développement</p>
+      </div>
+
+      <div class="blog-grid">
+        <a href="blog/security-guide.html" class="blog-card-link">
+          <article class="blog-card reveal">
+            <div class="blog-category" data-i18n="blog_cat_security">Sécurité</div>
+            <h3 class="blog-title" data-i18n="blog_1_title">Guide de Sécurité Réseau pour PME</h3>
+            <p class="blog-excerpt" data-i18n="blog_1_excerpt">Les meilleures pratiques pour sécuriser votre infrastructure réseau contre les cybermenaces courantes.</p>
+            <div class="blog-meta">
+              <span class="blog-date">15 Jan 2026</span>
+              <span class="blog-read-time">8 min lecture</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="blog/wifi-optimization.html" class="blog-card-link">
+          <article class="blog-card reveal">
+            <div class="blog-category" data-i18n="blog_cat_network">Réseaux</div>
+            <h3 class="blog-title" data-i18n="blog_2_title">Optimisation Wi-Fi pour Entreprises</h3>
+            <p class="blog-excerpt" data-i18n="blog_2_excerpt">Comment configurer un réseau Wi-Fi performant et sécurisé pour votre environnement professionnel.</p>
+            <div class="blog-meta">
+              <span class="blog-date">10 Jan 2026</span>
+              <span class="blog-read-time">6 min lecture</span>
+            </div>
+          </article>
+        </a>
+
+        <a href="blog/react-vs-vue.html" class="blog-card-link">
+          <article class="blog-card reveal">
+            <div class="blog-category" data-i18n="blog_cat_dev">Développement</div>
+            <h3 class="blog-title" data-i18n="blog_3_title">React vs Vue: Choix 2026</h3>
+            <p class="blog-excerpt" data-i18n="blog_3_excerpt">Comparatif approfondi des frameworks JavaScript pour choisir la meilleure solution pour votre projet.</p>
+            <div class="blog-meta">
+              <span class="blog-date">5 Jan 2026</span>
+              <span class="blog-read-time">10 min lecture</span>
+            </div>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       QUOTE — REQUEST QUOTE
+  ───────────────────────────────── -->
+  <section id="quote" class="s-quote">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// QUOTE_REQUEST</span>
+        <h2 class="s-title" data-i18n="quote_title">Demande de Devis</h2>
+        <p class="s-subtitle" data-i18n="quote_sub">Obtenez un devis gratuit pour votre projet IT</p>
+      </div>
+
+      <div class="quote-layout">
+        <!-- Services selection -->
+        <div class="quote-services-panel">
+          <h3 class="panel-subtitle" data-i18n="quote_services">Sélectionnez vos services</h3>
+          <div class="quote-services-grid">
+            <label class="quote-service-card">
+              <input type="checkbox" name="services" value="support" class="quote-service-input">
+              <div class="quote-service-content">
+                <div class="qsc-icon">🖥️</div>
+                <div class="qsc-info">
+                  <strong data-i18n="qs_support">Support IT</strong>
+                  <span data-i18n="qs_support_desc">Maintenance, dépannage, helpdesk</span>
+                </div>
+                <div class="qsc-price">À partir de <span class="price-val">50,000</span> FCFA/jour</div>
+              </div>
+            </label>
+            <label class="quote-service-card">
+              <input type="checkbox" name="services" value="dev" class="quote-service-input">
+              <div class="quote-service-content">
+                <div class="qsc-icon">⚡</div>
+                <div class="qsc-info">
+                  <strong data-i18n="qs_dev">Développement Web</strong>
+                  <span data-i18n="qs_dev_desc">Site web, application, API</span>
+                </div>
+                <div class="qsc-price">À partir de <span class="price-val">150,000</span> FCFA</div>
+              </div>
+            </label>
+            <label class="quote-service-card">
+              <input type="checkbox" name="services" value="network" class="quote-service-input">
+              <div class="quote-service-content">
+                <div class="qsc-icon">🌐</div>
+                <div class="qsc-info">
+                  <strong data-i18n="qs_network">Réseaux & Infrastructure</strong>
+                  <span data-i18n="qs_network_desc">LAN, Wi-Fi, serveurs</span>
+                </div>
+                <div class="qsc-price">À partir de <span class="price-val">75,000</span> FCFA/jour</div>
+              </div>
+            </label>
+            <label class="quote-service-card">
+              <input type="checkbox" name="services" value="cm" class="quote-service-input">
+              <div class="quote-service-content">
+                <div class="qsc-icon">📱</div>
+                <div class="qsc-info">
+                  <strong data-i18n="qs_cm">Community Management</strong>
+                  <span data-i18n="qs_cm_desc">Réseaux sociaux, animation</span>
+                </div>
+                <div class="qsc-price">À partir de <span class="price-val">100,000</span> FCFA/mois</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Quote form -->
+        <form class="quote-form" id="quote-form" novalidate>
+          <div class="form-group">
+            <label for="qf-name" class="form-label" data-i18n="cf_name">Nom complet</label>
+            <input type="text" id="qf-name" name="name" class="form-input" placeholder="Jean Dupont" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="qf-company" class="form-label" data-i18n="qf_company">Entreprise (optionnel)</label>
+            <input type="text" id="qf-company" name="company" class="form-input" placeholder="Votre entreprise" autocomplete="organization" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="qf-email" class="form-label">Email</label>
+              <input type="email" id="qf-email" name="email" class="form-input" placeholder="jean@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="qf-phone" class="form-label" data-i18n="qf_phone">Téléphone</label>
+              <input type="tel" id="qf-phone" name="phone" class="form-input" placeholder="+237 ..." autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="qf-budget" class="form-label" data-i18n="qf_budget">Budget estimé</label>
+            <select id="qf-budget" name="budget" class="form-input">
+              <option value="" data-i18n="qf_budget_select">Sélectionnez...</option>
+              <option value="50-100">50,000 - 100,000 FCFA</option>
+              <option value="100-250">100,000 - 250,000 FCFA</option>
+              <option value="250-500">250,000 - 500,000 FCFA</option>
+              <option value="500-1m">500,000 - 1,000,000 FCFA</option>
+              <option value="1m+">Plus de 1,000,000 FCFA</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="qf-deadline" class="form-label" data-i18n="qf_deadline">Délai souhaité</label>
+            <select id="qf-deadline" name="deadline" class="form-input">
+              <option value="" data-i18n="qf_deadline_select">Sélectionnez...</option>
+              <option value="urgent" data-i18n="qf_urgent">Urgent (< 1 semaine)</option>
+              <option value="2weeks" data-i18n="qf_2weeks">2 semaines</option>
+              <option value="1month" data-i18n="qf_1month">1 mois</option>
+              <option value="3months" data-i18n="qf_3months">3 mois</option>
+              <option value="flexible" data-i18n="qf_flexible">Flexible</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="qf-details" class="form-label" data-i18n="qf_details">Détails du projet</label>
+            <textarea id="qf-details" name="details" class="form-input form-textarea" rows="4" data-i18n-placeholder="qf_details_ph" placeholder="Décrivez votre projet, vos besoins spécifiques..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit-full" id="btn-quote-submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span id="btn-quote-txt" data-i18n="quote_submit">Demander un devis gratuit</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Quote submitted animation -->
+      <div class="quote-sent-overlay" id="quote-sent" aria-live="polite" aria-hidden="true">
+        <div class="quote-sent-box">
+          <div class="terminal-topbar">
+            <span class="tdot tdot-r"></span><span class="tdot tdot-y"></span><span class="tdot tdot-g"></span>
+            <span class="ttitle">quote.sys — devis envoyé</span>
+          </div>
+          <div class="qs-body" id="qs-body"></div>
+          <button class="qs-close" id="qs-close" data-i18n="tc_close">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────
+       CONTACT — OPEN TICKET
+  ───────────────────────────────── -->
+  <section id="contact" class="s-contact">
+    <div class="container">
+      <div class="s-header">
+        <span class="s-tag">// OPEN_TICKET</span>
+        <h2 class="s-title" data-i18n="contact_title">Ouvrir un Ticket</h2>
+        <p class="s-subtitle" data-i18n="contact_sub">Missions freelance · CDI/CDD · Consulting IT</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Info panel -->
+        <div class="contact-info-panel">
+          <div class="cip-terminal">
+            <div class="terminal-topbar">
+              <span class="tdot tdot-r"></span><span class="tdot tdot-y"></span><span class="tdot tdot-g"></span>
+              <span class="ttitle">contact.info</span>
+            </div>
+            <div class="cip-lines">
+              <div class="cip-line"><span class="cip-key">email_pro</span><a href="mailto:contact@georgesedimo.com">contact@georgesedimo.com</a></div>
+              <div class="cip-line"><span class="cip-key">email_alt</span><a href="mailto:georgese66@gmail.com">georgese66@gmail.com</a></div>
+              <div class="cip-line"><span class="cip-key">tel_main</span><a href="tel:+237686653327">+237 686 653 327</a></div>
+              <div class="cip-line"><span class="cip-key">tel_alt1</span><a href="tel:+237697052245">+237 697 052 245</a></div>
+              <div class="cip-line"><span class="cip-key">whatsapp</span><a href="https://wa.me/237652508480" target="_blank" rel="noopener">+237 652 508 480</a></div>
+              <div class="cip-line"><span class="cip-key">location</span><span>Douala, Cameroun</span></div>
+              <div class="cip-line"><span class="cip-key">website</span><a href="https://georgesedimo.com" target="_blank" rel="noopener">georgesedimo.com</a></div>
+              <div class="cip-line"><span class="cip-key">linkedin</span><span>LinkedIn Profile</span></div>
+              <div class="cip-line cip-line-status"><span class="cip-key">status</span><span class="green-txt" data-i18n="status_dispo">DISPONIBLE_IMMÉDIATEMENT</span></div>
+            </div>
+          </div>
+          <a href="CV_Georges_Marcel_Exemple.pdf" download class="cv-btn-big" id="cv-btn-contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span data-i18n="download_cv_full">Télécharger le CV complet</span>
+            <span class="cv-dl-count2" id="cv-dl-count2">47</span>
+          </a>
+        </div>
+
+        <!-- Form -->
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name" class="form-label" data-i18n="cf_name">Nom complet</label>
+              <input type="text" id="cf-name" name="name" class="form-input" placeholder="Jean Dupont" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="cf-email" class="form-label">Email</label>
+              <input type="email" id="cf-email" name="email" class="form-input" placeholder="jean@example.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-type" class="form-label" data-i18n="cf_type">Type de mission</label>
+            <div class="mission-type-grid" id="mission-type-grid">
+              <button type="button" class="mtype-btn active" data-type="support" id="mt-support">
+                <span>🖥️</span> <span data-i18n="mt_support">Support IT</span>
+              </button>
+              <button type="button" class="mtype-btn" data-type="dev" id="mt-dev">
+                <span>⚡</span> <span data-i18n="mt_dev">Dev Web</span>
+              </button>
+              <button type="button" class="mtype-btn" data-type="cm" id="mt-cm">
+                <span>📱</span> <span data-i18n="mt_cm">Community Mgmt</span>
+              </button>
+              <button type="button" class="mtype-btn" data-type="other" id="mt-other">
+                <span>📋</span> <span data-i18n="mt_other">Autre</span>
+              </button>
+            </div>
+            <input type="hidden" id="cf-type" name="mission_type" value="support" />
+          </div>
+          <div class="form-group">
+            <label for="cf-subject" class="form-label" data-i18n="cf_subject">Sujet</label>
+            <input type="text" id="cf-subject" name="subject" class="form-input" data-i18n-placeholder="cf_subject_ph" placeholder="Objet de votre demande" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-message" class="form-label" data-i18n="cf_message">Message</label>
+            <textarea id="cf-message" name="message" class="form-input form-textarea" rows="5" data-i18n-placeholder="cf_msg_ph" placeholder="Décrivez votre projet ou votre besoin..." required></textarea>
+            <div class="form-charcount"><span id="char-count">0</span>/500</div>
+          </div>
+          <button type="submit" class="btn-primary btn-submit-full" id="btn-submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span id="btn-submit-txt" data-i18n="submit_btn">Créer le ticket</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Ticket created animation -->
+      <div class="ticket-created-overlay" id="ticket-created" aria-live="polite" aria-hidden="true">
+        <div class="ticket-created-box">
+          <div class="terminal-topbar">
+            <span class="tdot tdot-r"></span><span class="tdot tdot-y"></span><span class="tdot tdot-g"></span>
+            <span class="ttitle">ticket.sys — nouveau ticket</span>
+          </div>
+          <div class="tc-body" id="tc-body"></div>
+          <button class="tc-close" id="tc-close" data-i18n="tc_close">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/237652508480" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contact via WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1262.489 1.653 1.937 1.799.675.266 1.36.228 1.871.138.571-.099 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>GM<span class="logo-bracket">/&gt;</span>
+        <div>
+          <strong>Georges Marcel</strong>
+          <span>Digital Ops Command Center</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#hero" data-i18n="nav_profil">Profil</a>
+        <a href="#skills" data-i18n="nav_skills">Compétences</a>
+        <a href="#experience" data-i18n="nav_exp">Expérience</a>
+        <a href="#projects" data-i18n="nav_proj">Projets</a>
+        <a href="#testimonials" data-i18n="nav_testimonials">Témoignages</a>
+        <a href="#blog" data-i18n="nav_blog">Blog</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Moussango Edimo Georges Marcel</p>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="project-modal" id="project-modal" aria-hidden="true">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Project Details</h3>
+        <button class="modal-close" id="modal-close" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Content will be injected by JS -->
+      </div>
+    </div>
+  </div>
+
+</main><!-- /main -->
+
+<script src="script.js"></script>
+</body>
+</html>
